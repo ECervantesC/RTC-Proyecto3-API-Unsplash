@@ -1,24 +1,35 @@
+import { init } from './components/init/init'
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+const accessKey = 'WHLkqjNRoPmFMlbnGMMv2jFukXQ-ssYfqWr-jY9i7Ag' // Reemplaza esto con tu clave de acceso
+const query = 'gato playa' // Palabras clave para la búsqueda
 
-setupCounter(document.querySelector('#counter'))
+// URL de la API de Unsplash para buscar imágenes por palabras clave
+const url = `https://api.unsplash.com/search/photos?query=${encodeURIComponent(
+  query
+)}&client_id=${accessKey}&per_page=10`
+
+const getData = async (node) => {
+  try {
+    const response = await fetch(
+      `https://api.unsplash.com/search/photos?query=${encodeURIComponent(
+        query
+      )}&client_id=${accessKey}&per_page=10`
+    )
+    if (!response.ok) {
+      console.log('no tengo la respuesta?')
+    } else {
+      const res = await response.json()
+      console.log(res)
+    }
+  } catch (error) {
+    console.log('Error en la funcion')
+  }
+}
+// const div = document.querySelector('#app')
+// const arrayPhotos = getData(div)
+
+const firstDiv = document.querySelector('#app')
+// firstDiv es el nodo que va a ir despues del header
+init(firstDiv)
+// init crea el header y el footer
