@@ -1,0 +1,10 @@
+.iconDiv > img {
+  width: 40px;
+  height: 40px;
+  /* margin: 20px; */
+}
+@media screen and (max-width: 800px) {
+  .iconDiv {
+    display: none;
+  }
+}
