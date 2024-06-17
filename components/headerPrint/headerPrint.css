@@ -1,34 +1,56 @@
 header {
   height: 8svh;
   width: 100%;
-  background-color: red;
+  background-color: var(--background-primary-color);
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  gap: var(--gap-m);
+  padding: 0px var(--padding-s);
 }
 .navButtons {
+  width: 30svw;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 10px;
+  gap: var(--gap-s);
+}
+.searchDiv {
+  width: 50svw;
 }
 .navIcons {
+  width: 15svw;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 10px;
+  gap: var(--gap-s);
 }
 
 @media screen and (min-width: 800px) and (max-width: 1110px) {
   .navButtons {
     display: none;
   }
+  .searchDiv {
+    width: 65svw;
+  }
+  .navIcons {
+    width: 20svw;
+  }
 }
 @media screen and (max-width: 800px) {
   .navButtons {
+    display: none;
+  }
+  .searchDiv {
+    width: 75svw;
+  }
+  .navIcons {
+    width: 10svw;
+  }
+  .iconDiv {
     display: none;
   }
 }

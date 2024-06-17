@@ -1,16 +1,12 @@
 .userDiv {
   width: 40px;
   height: 40px;
-  background-color: yellow;
-  color: black;
-  font-size: 24px;
-  border-radius: 20px;
+  background-color: var(--background-terciary-color);
+  color: var(--font-terciary-color);
+  font-size: var(--font-size-l);
+  border-radius: var(--border-radius-m);
+  display: flex;
   justify-content: center;
   text-align: center;
-  /* padding: 33px, 70px, 33px, 70px; */
-  margin: 0px;
-}
-.userDiv > p {
-  margin: 0px;
-  gap: 0px;
+  align-items: center;
 }

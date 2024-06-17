@@ -1,24 +1,16 @@
 .searchDiv {
   position: relative;
-  /* width: 300px; */
 }
 
 .searchInput {
-  /* height: 60px;
-  width: 30svw;
-  background-color: #ececec;
-  border-radius: 30px;
-  border: none;
-  padding: 10px;
-  font-size: 16px;
-  outline: none; */
   height: 60px;
-  width: 30svw;
-  background-color: #ececec;
-  padding: 10px 20px 10px 40px; /* Espacio para el icono de lupa */
-  font-size: 16px;
-  /* border: 1px solid #ccc; */
-  border-radius: 30px;
+  width: 100%;
+  background-color: var(--background-terciary-color);
+  padding: var(--padding-s) var(--padding-m) var(--padding-s) var(--padding-xl); /* Espacio para el icono de lupa */
+  color: var(--font-terciary -color);
+  font-size: var(--font-size-l);
+  border-radius: var(--border-radius-l);
+  border: none;
   outline: none;
   box-sizing: border-box;
 }
@@ -26,11 +18,9 @@
 .searchDiv::before {
   content: '\1F50D'; /* Unicode para el icono de lupa */
   position: absolute;
-  left: 2%;
+  left: 1%;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 18px;
-  /* color: #aaa; */
-  color: green;
+  font-size: var(--font-size-l);
   z-index: 2;
 }
