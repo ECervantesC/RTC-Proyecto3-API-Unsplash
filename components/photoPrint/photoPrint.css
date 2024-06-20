@@ -4,12 +4,11 @@
   justify-content: space-between;
   align-items: center;
   gap: var(--gap-m);
-  border: 1px black solid;
+  margin-bottom: var(--margin-l);
 }
 .divPhotosContainer {
   position: relative;
   margin-bottom: 40px;
-  border: 1px black solid;
 }
 .photoImage {
   width: 264px;
@@ -35,4 +34,57 @@
 .uploadImage {
   width: 20px;
   height: 20px;
+}
+.divLikes {
+  width: 50px;
+  height: 50px;
+  background-color: var(--background-quaternary-color);
+  border-radius: var(--border-radius-l);
+  position: absolute;
+  top: 5%;
+  right: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--font-primary-color);
+  font-size: var(--font-size-m);
+}
+.divNumPhotos {
+  width: 50px;
+  height: 50px;
+  background-color: var(--background-quaternary-color);
+  border-radius: var(--border-radius-l);
+  position: absolute;
+  top: 5%;
+  left: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--font-primary-color);
+  font-size: var(--font-size-m);
+}
+.imgNumPhotos {
+  width: 20px;
+  height: 20px;
+}
+.imgLikes {
+  width: 20px;
+  height: 20px;
+}
+.divVisit {
+  width: 123px;
+  height: 60px;
+  border-radius: var(--border-radius-l);
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  color: white;
+  font-size: 24px;
+  font-weight: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

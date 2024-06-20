@@ -22,7 +22,7 @@ export const headerPrint = (followingNode) => {
   buttonPrint(navBarButtons, 'Explorar', 'URLto', 'white')
   buttonPrint(navBarButtons, 'Crear', 'URLto', 'white')
   header.appendChild(navBarButtons)
-  searchBarPrint(header)
+  searchBarPrint(header, followingNode)
   const navBarIcons = document.createElement('nav')
   navBarIcons.className = 'navIcons'
   iconPrint(

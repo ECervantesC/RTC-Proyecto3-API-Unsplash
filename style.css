@@ -16,6 +16,7 @@ a {
   --background-primary-color: #ffffff;
   --background-secondary-color: #000000;
   --background-terciary-color: #ececec;
+  --background-quaternary-color: #e7e7e7;
   --font-primary-color: #000000;
   --font-secondary-color: #ffffff;
   --font-terciary-color: #757575;
@@ -71,10 +72,13 @@ body {
 }
 
 #app {
-  background-color: orange;
   width: 100svw;
   height: 90svh;
   margin: 0 auto;
   padding: 2rem;
+  display: flex;
+  justify-content: space-between;
   text-align: center;
+  flex-wrap: wrap;
+  gap: var(--gap-m);
 }

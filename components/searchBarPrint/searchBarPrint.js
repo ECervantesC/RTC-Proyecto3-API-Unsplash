@@ -1,8 +1,10 @@
+import { getData } from '../getData/getData'
+import { getFilteredData } from '../getFilteredData/getFilteredData'
 import './searchBarPrint.css'
 
-// FALTA EL ICONO DE LA BUSQUEDA Y EL ADDEVENT LISTENER QUE RECOGA LAS PALABRAS DE BUSQUEDA
-
-export const searchBarPrint = (nodeContainer) => {
+// mejorar el icono de busqueda
+// Falta la lógica del addeventlistener
+export const searchBarPrint = (nodeContainer, nodeToPrint) => {
   const searchDiv = document.createElement('div')
   const searchInput = document.createElement('input')
   searchDiv.className = 'searchDiv'
@@ -11,4 +13,11 @@ export const searchBarPrint = (nodeContainer) => {
   searchInput.className = 'searchInput'
   searchDiv.appendChild(searchInput)
   nodeContainer.appendChild(searchDiv)
+  searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      const query = e.target.value
+      nodeToPrint.innerHTML = ''
+      getFilteredData(nodeToPrint, e.target.value)
+    }
+  })
 }
