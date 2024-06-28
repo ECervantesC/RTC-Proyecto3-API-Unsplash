@@ -17,6 +17,7 @@ header {
   align-items: center;
   gap: var(--gap-s);
 }
+/* NO DEBERÍA ESTAR AQUI*/
 .searchDiv {
   width: 50svw;
 }
