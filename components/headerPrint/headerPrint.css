@@ -18,9 +18,9 @@ header {
   gap: var(--gap-s);
 }
 /* NO DEBERÍA ESTAR AQUI*/
-.searchDiv {
+/* .searchDiv {
   width: 50svw;
-}
+} */
 .navIcons {
   width: 15svw;
   display: flex;

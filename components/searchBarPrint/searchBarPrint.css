@@ -1,5 +1,6 @@
 .searchDiv {
   position: relative;
+  width: 50svw;
 }
 
 .searchInput {
@@ -11,7 +12,6 @@
   border-radius: var(--border-radius-l);
   border: none;
   outline: none;
-  box-sizing: border-box; /* probar a borralo, esta en * de style.css*/
   padding: var(--padding-s) var(--padding-m) var(--padding-s) var(--padding-xxl); /* Espacio para el icono de lupa */
 }
 

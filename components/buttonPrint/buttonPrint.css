@@ -1,11 +1,13 @@
-.button {
+.anchor {
   width: 123px;
   height: 60px;
   font-size: var(--font-size-l);
   line-height: var(--font-line-heigth-m);
-  text-align: center;
   border-radius: var(--border-radius-l);
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .black {
   background-color: var(--background-secondary-color);

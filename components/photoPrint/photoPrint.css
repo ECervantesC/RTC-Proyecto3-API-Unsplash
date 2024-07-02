@@ -1,37 +1,61 @@
 .divCard {
+  min-width: 360px;
+  width: 18%;
+  height: 481px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: var(--gap-m);
   margin-bottom: var(--margin-l);
-}
-.divPhotosContainer {
   position: relative;
-  margin-bottom: 40px;
 }
-.photoImage {
-  width: 264px;
-  height: 481px;
+.imagePhoto {
+  width: 100%;
+  height: 85%;
+  object-fit: cover;
+  padding: var(--padding-s);
   border-radius: var(--border-radius-m);
 }
-.userImage {
-  width: 120px;
-  height: 120px;
+.divPhotographer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.imagePhotographer {
+  width: 56px;
+  height: 56px;
   border-radius: var(--border-radius-xl);
   border: var(--random-color) 8px solid;
-  position: absolute;
-  bottom: -10%;
-  left: 25%;
 }
 .divDate {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: var(--gap-s);
 }
 .uploadImage {
+  width: 20px;
+  height: 20px;
+}
+.divNumPhotos {
+  width: 50px;
+  height: 50px;
+  background-color: var(--background-quaternary-color);
+  border-radius: var(--border-radius-l);
+  position: absolute;
+  top: 5%;
+  left: 8%;
+  display: none;
+  color: var(--font-primary-color);
+  font-size: var(--font-size-m);
+}
+.imageNumPhotos {
   width: 20px;
   height: 20px;
 }
@@ -43,33 +67,11 @@
   position: absolute;
   top: 5%;
   right: 8%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: var(--font-primary-color);
   font-size: var(--font-size-m);
+  display: none;
 }
-.divNumPhotos {
-  width: 50px;
-  height: 50px;
-  background-color: var(--background-quaternary-color);
-  border-radius: var(--border-radius-l);
-  position: absolute;
-  top: 5%;
-  left: 8%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: var(--font-primary-color);
-  font-size: var(--font-size-m);
-}
-.imgNumPhotos {
-  width: 20px;
-  height: 20px;
-}
-.imgLikes {
+.imageLikes2 {
   width: 20px;
   height: 20px;
 }
@@ -77,14 +79,39 @@
   width: 123px;
   height: 60px;
   border-radius: var(--border-radius-l);
-  background-color: red;
+  background-color: var(--background-color-visit);
   position: absolute;
-  top: 50%;
-  left: 25%;
-  color: white;
-  font-size: 24px;
+  top: 35%;
+  left: 35%;
+  color: var(--font-secondary-color);
+  font-size: var(--font-size-l);
   font-weight: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
+}
+.divCard:hover {
+  .divVisit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .divLikes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .divNumPhotos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .imagePhotographer {
+    width: 120px;
+    height: 120px;
+  }
+  .divPhotographer {
+    top: 80%;
+    left: 50%;
+  }
 }

@@ -12,64 +12,78 @@ export const photoPrint = (
   userTotalPhotos
 ) => {
   const divCard = document.createElement('div')
-  const divPhotosContainer = document.createElement('div')
-  const divPhoto = document.createElement('div')
-  const photoImage = document.createElement('img')
-  const divUser = document.createElement('div')
-  const userImage = document.createElement('img')
-  const name = document.createElement('p')
+
+  const imagePhoto = document.createElement('img')
+
+  const divPhotographer = document.createElement('div')
+  const imagePhotographer = document.createElement('img')
+  const namePhotographer = document.createElement('p')
+
   const divDate = document.createElement('div')
   const uploadImage = document.createElement('img')
-  const date = document.createElement('p')
+  const textDate = document.createElement('p')
+
   const divNumPhotos = document.createElement('div')
-  const imgNumPhotos = document.createElement('img')
+  const imageNumPhotos = document.createElement('img')
   const textNumPhotos = document.createElement('p')
+
   const divLikes = document.createElement('div')
-  const imgLikes = document.createElement('img')
+  const imageLikes2 = document.createElement('img')
   const textLikes = document.createElement('p')
+
   const divVisit = document.createElement('div')
+
   divCard.className = 'divCard'
-  divPhotosContainer.className = 'divPhotosContainer'
-  photoImage.src = photoUrl
-  photoImage.alt = photoTitle
-  photoImage.className = 'photoImage'
-  userImage.src = photoUser
-  userImage.alt = nameUser
-  userImage.className = 'userImage'
-  userImage.style.setProperty('--random-color', borderColor)
+
+  imagePhoto.src = photoUrl
+  imagePhoto.alt = photoTitle
+  imagePhoto.className = 'imagePhoto'
+
+  divPhotographer.className = 'divPhotographer'
+  imagePhotographer.src = photoUser
+  imagePhotographer.alt = nameUser
+  imagePhotographer.className = 'imagePhotographer'
+  imagePhotographer.style.setProperty('--random-color', borderColor)
+  namePhotographer.textContent = nameUser
+
   divDate.className = 'divDate'
-  name.textContent = nameUser
   uploadImage.src = './assets/upload_share.png'
   uploadImage.alt = 'Subida a Unsplash'
   uploadImage.className = 'uploadImage'
-  date.textContent = photoDate
-  divLikes.className = 'divLikes'
+  textDate.textContent = photoDate
+
   divNumPhotos.className = 'divNumPhotos'
-  textLikes.textContent = imageLikes
-  imgLikes.className = 'imgLikes'
-  imgLikes.src = './assets/corazon.png'
-  imgLikes.alt = 'Corazon de likes'
-  imgNumPhotos.className = 'imgNumPhotos'
-  imgNumPhotos.src = './assets/camara-fotografica.png'
-  imgNumPhotos.alt = 'Camara de fotos'
+  imageNumPhotos.src = './assets/camara-fotografica.png'
+  imageNumPhotos.alt = 'Camara de fotos'
+  imageNumPhotos.className = 'imageNumPhotos'
   textNumPhotos.textContent = userTotalPhotos
+
+  divLikes.className = 'divLikes'
+  imageLikes2.src = './assets/corazon.png'
+  imageLikes2.alt = 'Corazon de likes'
+  imageLikes2.className = 'imageLikes2'
+  textLikes.textContent = imageLikes
+
   divVisit.className = 'divVisit'
   divVisit.textContent = 'Visitar'
-  divPhoto.append(photoImage)
-  divUser.append(userImage)
-  divPhotosContainer.append(divPhoto)
-  divPhotosContainer.append(divUser)
-  divLikes.append(imgLikes)
-  divLikes.append(textLikes)
-  divPhotosContainer.append(divLikes)
-  divNumPhotos.append(imgNumPhotos)
-  divNumPhotos.append(textNumPhotos)
-  divPhotosContainer.append(divNumPhotos)
-  divPhotosContainer.append(divVisit)
-  divCard.append(divPhotosContainer)
-  divCard.append(name)
+
+  divPhotographer.append(imagePhotographer)
+  divPhotographer.append(namePhotographer)
+
   divDate.append(uploadImage)
-  divDate.append(date)
+  divDate.append(textDate)
+
+  divNumPhotos.append(imageNumPhotos)
+  divNumPhotos.append(textNumPhotos)
+
+  divLikes.append(imageLikes2)
+  divLikes.append(textLikes)
+
+  divCard.append(imagePhoto)
+  divCard.append(divPhotographer)
   divCard.append(divDate)
+  divCard.append(divNumPhotos)
+  divCard.append(divLikes)
+  divCard.append(divVisit)
   nodoContenedor.append(divCard)
 }

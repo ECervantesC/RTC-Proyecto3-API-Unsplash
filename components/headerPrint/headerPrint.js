@@ -18,9 +18,19 @@ export const headerPrint = (followingNode) => {
   logoPrint(header, './assets/logoPinterest.png', 'Logo Pinterest')
   const navBarButtons = document.createElement('nav')
   navBarButtons.className = 'navButtons'
-  buttonPrint(navBarButtons, 'Inicio', 'URLto', 'black')
-  buttonPrint(navBarButtons, 'Explorar', 'URLto', 'white')
-  buttonPrint(navBarButtons, 'Crear', 'URLto', 'white')
+  buttonPrint(navBarButtons, 'Inicio', 'https://www.pinterest.es/', 'black')
+  buttonPrint(
+    navBarButtons,
+    'Explorar',
+    'https://www.pinterest.es/today/',
+    'white'
+  )
+  buttonPrint(
+    navBarButtons,
+    'Crear',
+    'https://www.pinterest.es/pin-creation-tool/',
+    'white'
+  )
   header.appendChild(navBarButtons)
   searchBarPrint(header, followingNode)
   const navBarIcons = document.createElement('nav')
