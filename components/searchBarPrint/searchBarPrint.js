@@ -13,11 +13,15 @@ export const searchBarPrint = (nodeContainer, nodeToPrint) => {
   searchInput.className = 'searchInput'
   searchDiv.appendChild(searchInput)
   nodeContainer.appendChild(searchDiv)
+  searchInput.addEventListener('click', (e) => {
+    searchInput.placeholder = ''
+    e.target.value = ''
+  })
   searchInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
       const query = e.target.value
       nodeToPrint.innerHTML = ''
-      getFilteredData(nodeToPrint, e.target.value)
+      getFilteredData(nodeToPrint, query)
     }
   })
 }
